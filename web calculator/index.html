@@ -1,53 +1,62 @@
 <!doctype html>
-<html class="no-js" lang="">
+<html lang="en">
+
 
 <head>
-  <meta charset="utf-8">
-  <meta http-equiv="x-ua-compatible" content="ie=edge">
-  <title></title>
-  <meta name="description" content="">
-  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>Restaurant Check Splitting Calculator</title>
+    <link href="css/style.css" media="all" rel="stylesheet" />
+    <link rel="shortcut icon" href="" />
+  </head>
 
-  <link rel="manifest" href="site.webmanifest">
-  <link rel="apple-touch-icon" href="icon.png">
-  <!-- Place favicon.ico in the root directory -->
-
-  <link rel="stylesheet" href="css/normalize.css">
-  <link rel="stylesheet" href="css/main.css">
-</head>
 
 <body>
- 
-  <p>Hello World.</p>
-  <h1>OK Very First One</h1>
-  <div id="one">333</div>
-  <p class="class">222</p>
-  <div id="input">
-    <input type="text" id="n1">
-    <input type="text" id="n2">
+
+  <div class="bill">
+    <div class="title">Customer list</div>
+    
+    <div class="add">
+       <div class="guide">Enter the number of customers<br><input type="number" max="12" id="cnumber"> <button id="myBtn">Enter</button></div>
+    </div>
+      <div class="customerlist"></div>
   </div>
- <button onclick="enterNow()">Enter</button>
 
 
 
 
+  <div class="menu">
+    <div class="title">Menu</div>
+    <div class="item" data-amount="10" data-item="burger"> 
+      <img class="foodimg" src="img/burger.png" height="100px" width="100px"> <div class="price">$10.00</div>
+    </div>
+
+    <div class="item" data-amount="3" data-item="fries"> 
+      <img class="foodimg" src="img/fries.png" height="100px" width="100px"> <div class="price">$3.00</div>
+    </div>
+
+    <div class="item" data-amount="5" data-item="salad"> 
+      <img class="foodimg" src="img/salad.png"  height="100px" width="100px"> <div class="price">$5.00</div>
+    </div>
+
+    <div class="item" data-amount="6" data-item="hotdog"> 
+      <img class="foodimg" src="img/hotdog.png" height="100px" width="100px"> <div class="price">$6.00</div>
+    </div>
+
+    <div class="item" data-amount="7" data-item="cake"> 
+      <img class="foodimg" src="img/cake.png"  height="100px" width="100px"> <div class="price">$7.00</div>
+    </div>
+
+    <div class="item" data-amount="2" data-item="drink"> 
+      <img class="foodimg" src="img/drink.png"  height="100px" width="100px"> <div class="price">$2.00</div>
+    </div>
+
+
+  </div>
 
 
 
-
-
-  <script src="js/vendor/modernizr-3.6.0.min.js"></script>
-  <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
-  <script>window.jQuery || document.write('<script src="js/vendor/jquery-3.3.1.min.js"><\/script>')</script>
-  <script src="js/plugins.js"></script>
-  <script src="js/main.js"></script>
-
-  <!-- Google Analytics: change UA-XXXXX-Y to be your site's ID. -->
-  <script>
-    window.ga = function () { ga.q.push(arguments) }; ga.q = []; ga.l = +new Date;
-    ga('create', 'UA-XXXXX-Y', 'auto'); ga('send', 'pageview')
-  </script>
-  <script src="https://www.google-analytics.com/analytics.js" async defer></script>
+<script src="https://code.jquery.com/jquery-1.12.4.min.js" integrity="sha256-ZosEbRLbNQzLpnKIkEdrPv7lOy9C27hHQ+Xp8a4MxAQ=" crossorigin="anonymous"></script> 
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+    <script src="js/script.js"></script>
+ 
 </body>
-
 </html>
