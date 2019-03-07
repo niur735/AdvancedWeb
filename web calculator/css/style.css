@@ -21,9 +21,10 @@
 
 }
 .order{
-    padding: 30px 40px 30px 40px;
+    padding: 30px 40px 15px 40px;
     cursor: pointer;
     margin-top: 10px;
+    border: 2px dashed black;
 }
 
 
@@ -36,7 +37,7 @@
     margin: 40px 30px auto 30px;
 }
 
-.price{text-align: center;}
+.prices{text-align: center;}
 
 .orderitem{font-family: futura;
 font-size: 14pt;}
@@ -48,7 +49,7 @@ display: inline-block;
 margin: 5px auto 20px 80px;}
 .orderprice{display: inline-block;}
 
-.customerlist{margin-top: 50px;}
+.customerlist{margin-top: 30px;}
 .list{
     font-family: futura;
     font-size: 14pt;
@@ -73,22 +74,21 @@ height: 30px;
 font-family: futura;
     font-size: 12pt;}
 
-.check{
+
+.cal{
     font-family: futura;
     font-size: 12pt;
     color: white;
-    position: relative;
-    right:20px;
-    bottom: 30px;
+    align-items: right;
     text-align: right;
+    padding: 30px 0 0 0;
 }
 
-.check:hover{
-    text-decoration-line: underline;
-    cursor: pointer;
+.guide2{font-size: 14pt;
+    line-height: 40px;
+    display: none;
+    color:grey;
 }
-
-
 
 
 
