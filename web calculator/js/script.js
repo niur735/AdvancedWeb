@@ -51,12 +51,13 @@ $(function() {
 			subtotal = (subtotal + price);
 			tips = (subtotal * 0.18).toFixed(2);
 			tax = (subtotal * 0.085).toFixed(2);
+			// question part
 			total = (subtotal + tips + tax);
+			// question part
    			$('.subtotal').html('Subtotal:$' + subtotal);
    			$('.tips').html('Tips:$' + tips);
-
+   			$('.tax').html('Tax:$' + tax);
    			// question part
-   			$('.tas').html('Tax:$' + tax);
    			$('.total').html('Total:$' + total);
    			// question part
 		});			
