@@ -1,0 +1,35 @@
+body{
+	background-color: black;
+	color: white;
+	text-align: center;
+	font-family: 'roboto';
+	font-size: 20pt;
+	line-height: 40px;
+}
+
+input{	
+	font-family: 'roboto';
+	font-size: 20pt;
+	line-height: 40px;
+	width: 100px;
+}
+select{	
+	font-family: 'roboto';
+	font-size: 20pt;
+	line-height: 40px;
+}
+
+button{	
+	font-family: 'roboto';
+	font-size: 15pt;
+	line-height: 40px;
+	margin-top: 3vh;
+}
+
+.guide{margin-top: 25vh;}
+.in{
+	margin-top: 5vh;
+}
+.out{margin-top:10vh;
+font-size: 40pt;
+color: red;}

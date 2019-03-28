@@ -1,5 +1,15 @@
 $(function() {
 
+		var subtotal;
+		var tips;
+		var tax;
+		var total;
+		var item;
+		var price;
+		var orderdetial;
+
+
+
 		var empty = true;
 		$("input").each(function(){
 		   if($(this).val()!=""){
@@ -28,48 +38,70 @@ $(function() {
 			 $('.order').click(function(){
  			 if (clicked == false) {
  			 $(this).addClass('background');
- 			 clicked = true; }
+ 			 clicked = true; 
+ 			 addItem();}
  			 
  			 else{
- 			 $(this).removeClass('background');
+ 			 $('.order').removeClass('background');
  			 clicked = false;}
  			 });
 	};	
 		
 	
 	function addItem (){
-		var subtotal = 0;
-		var tips = 0;
-		var tax = 0;
-		var total = 0;
+		 subtotal = 0;
+		 tips = 0;
+		 tax = 0;
+		 total = 0;
+		 item = '<div></div>';
+		 price = '<div></div>';
+		 orderdetial = '<div></div>';
 
-		$('.item').click(function(){
+		// $('.item').click(function(){
+		// 	var item = $(this).data('item');
+		// 	var price = $(this).data('amount');
+		// 	var orderdetial = '<li class="orderitem">'+ item +'</li><div class="moneysign">$<div data-price="'+ price +'" class="orderprice">'+ price +'</div></div>';
+			
+		// 	$('.background').prepend(orderdetial); 
+
+		// 	subtotal = (subtotal + price);
+		// 	tips = (subtotal * 0.18).toFixed(2);
+		// 	tax = (subtotal * 0.085).toFixed(2);
+		// 	total = (Number(subtotal) + Number(tips) + Number(tax));
+
+  //  			$('.background').find('.subtotal').html('Subtotal:$' + subtotal);
+  //  			$('.background').find('.tips').html('Tips:$' + tips);
+  //  			$('.background').find('.tax').html('Tax:$' + tax);
+  //  			$('.background').find('.total').html('Total:$' + total);
+
+		// });			
+	};
+
+$('.item').click(function(){
 			var item = $(this).data('item');
 			var price = $(this).data('amount');
 			var orderdetial = '<li class="orderitem">'+ item +'</li><div class="moneysign">$<div data-price="'+ price +'" class="orderprice">'+ price +'</div></div>';
-			$('.orderlist').append(orderdetial); 
+			
+			$('.background').prepend(orderdetial); 
+
 			subtotal = (subtotal + price);
 			tips = (subtotal * 0.18).toFixed(2);
 			tax = (subtotal * 0.085).toFixed(2);
-			// question part
-			total = (subtotal + tips + tax);
-			// question part
-   			$('.subtotal').html('Subtotal:$' + subtotal);
-   			$('.tips').html('Tips:$' + tips);
-   			$('.tax').html('Tax:$' + tax);
-   			// question part
-   			$('.total').html('Total:$' + total);
-   			// question part
-		});			
-	};
+			total = (Number(subtotal) + Number(tips) + Number(tax));
 
+   			$('.background').find('.subtotal').html('Subtotal:$' + subtotal);
+   			$('.background').find('.tips').html('Tips:$' + tips);
+   			$('.background').find('.tax').html('Tax:$' + tax);
+   			$('.background').find('.total').html('Total:$' + total);
+
+		});	
 
 
 
 	$("#cnumber").keypress(function(event) {
 			    if (event.keyCode==13) {
 			    	listCreator()
-			    	addItem()
+			 
 			    	$('.add').css('display','none');
 			    	$('.guide2').css('display','block');}	
 	});
@@ -77,7 +109,7 @@ $(function() {
 	$("#myBtn").click(function(event){ 
 			        //send to function
 			        listCreator()
-			        addItem()
+			
 			        $('.add').css('display','none');  
 			        $('.guide2').css('display','block');
 	});
