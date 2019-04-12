@@ -29,12 +29,12 @@ $(function() {
         //slide to next image
         if (d==="n"){
             $("#slides").animate({
-                top: "-=100vw"},2000); 
+                top: "-=100vw"},1000); 
             curr++;
         //slide to previous image
         } else if (d==="p") {
             $("#slides").animate({
-                top: "+=100vw"},2000); 
+                top: "+=100vw"},1000); 
             curr--;  
         //slide to beginning    
         } else {
@@ -50,7 +50,7 @@ $(function() {
         } else {
             changeSlide("n");
         }
-    }, 3000);
+    }, 5000);
 
     //go to the previous slide
     $(".left").click(function(){ 
