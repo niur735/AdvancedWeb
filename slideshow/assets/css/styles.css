@@ -1,0 +1,90 @@
+.left{
+	left: 3vw;
+	top:48vh;
+}
+.right{
+	right: 3vw;
+	top:48vh;
+}
+.button{position: absolute;
+	width: 2vw;
+	height: auto;
+	z-index: 111111;
+}
+
+.button:hover{cursor: pointer;}
+#container {
+	width: 100vh;
+  	height: 700vw;
+    margin:0;
+    position:relative;
+    overflow-x:scroll;
+    transform: rotate(-90deg) translateY(-80vw);
+  	transform-origin: right top;
+  	top: -1vh;
+
+}
+nav button{ display:inline-block }
+
+#slides {
+    display:inline-block;
+    position:relative;
+    margin-top: 79.5vw;
+    padding: 0;
+
+}
+#slides > div {
+transform: rotate(90deg);
+  transform-origin: right top;
+      width:100vh;
+    min-height:100vw;
+}
+img{width: 100vw;
+height: 100vh;}
+/*#slides > div {
+  transform: rotate(90deg);
+  transform-origin: right top;
+}*/
+
+/*body{background-color: black;}
+.left{
+	left: 3vw;
+	top:48vh;
+}
+.right{
+	right: 3vw;
+	top:48vh;
+}
+.button{position: absolute;
+	width: 2vw;
+	height: auto;
+	z-index: 111111;
+}
+
+.button:hover{cursor: pointer;}
+
+.photos{
+	width:100vw;
+	height: 100vh;	
+}
+.photocontain{display: inline-block;
+position: relative;
+left: -0.5vw;
+top: -1vh;}
+
+.mr{animation: movetoright 5s forwards;}
+.mt{animation: movetoleft 5s forwards;}
+.mr2{animation: movetorighta 5s forwards;}
+.mt2{animation: movetolefta 5s forwards;}
+
+@keyframes movetoright{
+	from{left: -0.5vw;}
+	to{left:100vw;}
+}
+
+@keyframes movetoleft{
+	from{left: -0.5vw;}
+	to{left:-101vw;}
+}
+*/
+
