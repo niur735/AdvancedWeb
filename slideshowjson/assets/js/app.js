@@ -1,11 +1,11 @@
 var slideshow = [];
-var datafile = "data/ocean.json";
+var datafile = "assets/data/ocean.json";
 var curr, prev, next;
 
 function preload(file) {
       $.getJSON(file, function(data) { 
         //loop through data to get image paths       
-        $.each(data.lemurs, function( i, obj ) {
+        $.each(data.ocean, function( i, obj ) {
             //preload images
             var img = new Image();
             img.src = obj.image;
@@ -17,77 +17,68 @@ function preload(file) {
 preload(datafile);
 
 $(function() { 
-
+    curr=0;
     //get file again 
     $.getJSON(datafile, function(data) { 
         //store json data in array
-        slideshow = data.lemurs;
+        slideshow = data.ocean;
         //loop through array to get content
         $.each(slideshow, function( i, obj ) {
-            $("#slides").append("<li id="+i+"><img  src="+obj.image+"><div class='text'><span class='title'>"+obj.title+"</span><span class='caption'>"+obj.caption+"</span></div></li>");
+            $("#slides").append("<li id="+i+"><img  src="+obj.image+"><span class='title'>"+obj.title+"</span></li>");
+            
+             $("#slides").find("li:eq("+i+")").css(
+             {"z-index":slideshow.length-curr,
+             "left":curr*100+"vw"}
+         );
+         curr++;
         });
-    });
-});
-
-
-// $(function() {    
-//     let curr = 0; 
-
-//      $(photos).each(function(){
-//          $("#slides").append("<div id="+curr+"><img src="+this+"></div>");
-//          $("#slides").find("div:eq("+curr+")").css(
-//              {"z-index":photos.length-curr}
-//          );
-//          curr++;
-//      });
-
-//     curr = 0;
-
-//     function changeSlide(d){
-//         //slide to next image
-//         if (d==="n"){
-//             $("#slides").animate({
-//                 top: "-=100vw"},1000); 
-//             curr++;
-//         //slide to previous image
-//         } else if (d==="p") {
-//             $("#slides").animate({
-//                 top: "+=100vw"},1000); 
-//             curr--;  
-//         //slide to beginning    
-//         } else {
-//             $("#slides").animate({top: "0"},500);
-//             curr=0;
-//         }
-//     }
-    
-//     var auto = window.setInterval(function(){ 
-//         if (curr===photos.length-1){
-//             //reset if at the end
-//             changeSlide("b");
-//         } else {
-//             changeSlide("n");
-//         }
-//     }, 5000);
-
-    //go to the previous slide
-    $(".left").click(function(){ 
-        //stop the autoplay
+        
+     $("nav button").css({"z-index":slideshow.length});
+    //reset current to 0
+    curr = 0;
+        
+            function changeSlide(d){
+        //slide to next image
+        if (d==="n"){
+            $("#slides").animate({
+                left: "-=100vw"},1000); 
+            curr++;
+        //slide to previous image
+        } else if (d==="p") {
+            $("#slides").animate({
+                left: "+=100vw"},1000); 
+            curr--;  
+        //slide to beginning    
+        } else {
+            $("#slides").animate({left: "0"},500);
+            curr=0;
+        }
+    }
+        
+            var auto = window.setInterval(function(){ 
+        if (curr===slideshow.length-1){
+            //reset if at the end
+            changeSlide("b");
+        } else {
+            changeSlide("n");
+        }
+    }, 10000);
+        
+            //go to the previous slide
+$("#prev").click(function(){ 
         clearInterval(auto);
-        //check the current index to make sure it is not on the first slide
+        //check the current index
         if (curr>0){   
             //slide in previous image
             changeSlide("p");
         }
     });
     
-    //go to the next slide
-    $(".right").click(function(){
-        //stop the autoplay
+    $("#next").click(function(){
         clearInterval(auto);
         console.log("current:"+curr);
 
-        if (curr<photos.length-1){
+        if (curr<slideshow.length-1){
             //slide in next image
             changeSlide("n");
         } else {
@@ -95,4 +86,5 @@ $(function() {
             changeSlide("b"); 
         } 
     });
-// });
+});
+});

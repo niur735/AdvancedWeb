@@ -1,12 +1,12 @@
 {"ocean":[
-    { "title":"Light Blue","image":"img/1.jpg"},
-    { "title":"Away","image":"img/2.jpg" },
-    { "title":"Sky Wood","image":"img/3.jpg"},
-    { "title":"Daybreak","image":"img/4.jpg"},
-    { "title":"Mermaid","image":"img/5.jpg"},
-    { "title":"Bench","image":"img/6.jpg"},
-    { "title":"Looking Down","image":"img/7.jpg"},
-    { "title":"Rest","image":"img/8.jpg"},
-    { "title":"Far Far Away","image":"img/9.jpg"},
-    { "title":"Ocean Blue","image":"img/10.jpg"}
+    { "title":"Light Blue","image":"assets/img/1.jpg"},
+    { "title":"Away","image":"assets/img/2.jpg"},
+    { "title":"Sky Wood","image":"assets/img/3.jpg"},
+    { "title":"Daybreak","image":"assets/img/4.jpg"},
+    { "title":"Mermaid","image":"assets/img/5.jpg"},
+    { "title":"Bench","image":"assets/img/6.jpg"},
+    { "title":"Looking Down","image":"assets/img/7.jpg"},
+    { "title":"Rest","image":"assets/img/8.jpg"},
+    { "title":"Far Far Away","image":"assets/img/9.jpg"},
+    { "title":"Ocean Blue","image":"assets/img/10.jpg"}
 ]}
