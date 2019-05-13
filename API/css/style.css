@@ -1,0 +1,50 @@
+      #map {
+        height: 80vh;
+        width: 80vw;
+        margin: 8vh auto auto auto;
+        font-family:  'Neue-Regular','sans-serif';
+      }
+      /* Optional: Makes the sample page fill the window. */
+      html, body {
+        height: 100%;
+        margin: 0;
+        padding: 0;
+      }
+
+       #floating-panel {
+        position: relative;
+        margin: 20px auto auto auto;
+        z-index: 5;
+        width: 20vw;
+        background-color: #fff;
+        padding: 5px;
+        border: 1px solid #999;
+        text-align: center;
+        font-family: 'Neue-Regular','sans-serif';
+        line-height: 30px;
+        padding-left: 10px;
+      }
+
+      #address{
+         text-align: center;
+        font-family: 'Neue-Regular','sans-serif';
+        font-size: 15pt;
+      }
+
+      .zoom{
+        position: relative;
+        margin: 20px auto auto auto;
+        width: 25vw;
+        text-align: center;
+        font-family:  'Neue-Regular','sans-serif';
+      }
+      .zoombutton{
+        position: absolute;
+        left: 48vw;
+        top:120px;
+        width: 5vw;
+        text-align: center;
+        font-family:  'Neue-Regular','sans-serif';
+      }
+
+

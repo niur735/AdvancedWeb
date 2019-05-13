@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+
+<head>
+    <title>What's near New School</title>
+    <link href="css/style.css" media="all" rel="stylesheet" />
+    <link href="css/Neue-Regular.otf">
+    <link rel="shortcut icon" href="" />
+  </head>
+
+
+<body>
+
+<div id="floating-panel">
+      <input id="address" type="textbox" value="The New School">
+      <input id="submit" type="button" value="search">
+    </div>
+
+  <div class="zoom">Select the zoom amount:
+    <select class="single">
+      <option value="1">World</option>
+      <option value="5">Landmass</option>
+      <option value="10">City</option>
+      <option value="15">Streets</option>
+      <option value="20">Buildings</option>
+    </select>
+  </div>
+  <button class="zoombutton">zoom now</button>
+
+  <p></p>
+
+    <div id="map"></div>
+
+
+
+<script src="https://code.jquery.com/jquery-1.12.4.min.js" integrity="sha256-ZosEbRLbNQzLpnKIkEdrPv7lOy9C27hHQ+Xp8a4MxAQ=" crossorigin="anonymous"></script> 
+
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+
+    <script src="js/script.js"></script> 
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDmQp1baXn7a-azuurL8xX2lCxz70Bc4CQ&callback=initMap"async defer></script>
+ 
+</body>
+</html>
